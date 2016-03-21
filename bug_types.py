@@ -2,8 +2,7 @@ import turtle as bug
 import random
 
 
-BUG_BACK = [ "orchid", "goldenrod", "lightgrey", "thistle", "rosybrown",            "mediumorchid", "darkkhaki", "greenyellow", "mediumvioletred",            "indianred", "peru", "chocolate", "palegreen", "tan",
-                "darkgoldenrod", "palevioletred", "red", "lightcyan" ]
+BUG_BACK = [ "orchid", "goldenrod", "lightgrey", "thistle", "rosybrown", "mediumorchid", "darkkhaki", "greenyellow", "mediumvioletred","indianred", "peru", "chocolate", "palegreen", "tan", "darkgoldenrod", "palevioletred", "red", "lightcyan" ]
 
 class Scarab:
 # Scarab class for representing and generating scarab-shaped bug.

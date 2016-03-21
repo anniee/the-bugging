@@ -29,4 +29,6 @@ beta_bug = TheBug()
 # beta_bug = TheBug()
 #pass attribute to change its position
 
+# bby_bug
+
 window.exitonclick()
