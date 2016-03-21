@@ -5,4 +5,4 @@ Programmers spend enough time debugging. The Bugging is a playful exercise for t
 ### Until server is set up, to see the bugging in action:
 
 clone this repository and run in terminal:
-    python bugging.py
+    `python bugging.py`

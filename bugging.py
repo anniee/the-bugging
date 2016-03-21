@@ -2,88 +2,31 @@
 # goal of practicing writing Mendelian inheritance algorithms
 import turtle as bug
 import random
-
-BEETLE_BACK = [ "orchid", "goldenrod", "lightgrey", "thistle", "rosybrown", "mediumorchid",
-                "darkkhaki", "greenyellow", "mediumvioletred", "indianred", "peru", "chocolate",
-                "palegreen", "tan", "darkgoldenrod", "palevioletred", "red", "lightcyan" ]
+from bug_types import Scarab, Lady
 
 window = bug.Screen()
 window.bgcolor("black")
 
-main_color = random.choice(BEETLE_BACK)
-detail_color = random.choice(BEETLE_BACK)
-legs_color = random.choice(BEETLE_BACK)
 
-scarab = bug.Turtle()
-scarab.color(main_color)
-scarab.pensize(5)
+THE_BUGS = [ Scarab, Lady ]
 
-scarab.fill(True)
-scarab.left(90)
-scarab.forward(50)
-scarab.right(45)
-scarab.forward(25)
-scarab.right(45)
-scarab.forward(10)
-scarab.right(45)
-scarab.forward(25)
-scarab.right(45)
-scarab.forward(50)
-scarab.fill(False)
 
-scarab.pencolor(detail_color)
-scarab.fill(True)
-scarab.circle(-22.5, 180)
-scarab.right(45)
-scarab.forward(30)
-scarab.right(90)
-scarab.forward(30)
-scarab.fill(False)
+class TheBug:
+  # For the unique, dynamically generated bug object.
 
-scarab.left(180)
-scarab.forward(30)
-scarab.right(45)
-scarab.forward(27)
-scarab.pu()
-scarab.left(90)
-scarab.forward(50)
+  def __init__(self):
 
-# draw legs and detail for top of wings
+    the_bug_type = random.choice(THE_BUGS)
+    self.bug_type = the_bug_type()
 
-scarab.pencolor(legs_color)
-scarab.pd()
-scarab.right(180)
-scarab.forward(25)
-scarab.pencolor(detail_color)
-scarab.forward(50)
-scarab.pencolor(legs_color)
-scarab.forward(30)
 
-scarab.pu()
-scarab.right(90)
-scarab.forward(25)
-scarab.pd()
-scarab.right(90)
-scarab.forward(30)
-scarab.pu()
-scarab.forward(50)
-scarab.pd()
-scarab.forward(25)
+alpha_bug = TheBug()
 
-scarab.pu()
-scarab.left(90)
-scarab.forward(25)
-scarab.pd()
-scarab.left(90)
-scarab.forward(25)
-scarab.pu()
-scarab.forward(50)
-scarab.pd()
-scarab.forward(30)
+# make these attributes so in bug_types can set attribute like "if beta bug, change position"
+
+beta_bug = TheBug()
+
+# beta_bug = TheBug()
+#pass attribute to change its position
 
 window.exitonclick()
-
-
-# 1. make bugs with random patterns/colors first
-# 2. classes of them, with specific atttributes for their colors/patterns and shapes, methods for movement/growing in size
-# 3. solidfy inheritance/generation of bby bug
