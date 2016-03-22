@@ -14,21 +14,18 @@ THE_BUGS = [ Scarab, Lady ]
 class TheBug:
   # For the unique, dynamically generated bug object.
 
-  def __init__(self):
+
+  def __init__(self, POS=0):
 
     the_bug_type = random.choice(THE_BUGS)
-    self.bug_type = the_bug_type()
+    self.bug_type = the_bug_type(POS)
 
 
-alpha_bug = TheBug()
 
-# make these attributes so in bug_types can set attribute like "if beta bug, change position"
+alpha_bug = TheBug(100)
 
-beta_bug = TheBug()
+beta_bug = TheBug(-100)
 
-# beta_bug = TheBug()
-#pass attribute to change its position
-
-# bby_bug
-
+# bby_bug = TheBug(-50)
+# y pos
 window.exitonclick()

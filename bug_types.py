@@ -1,19 +1,20 @@
 import turtle as bug
 import random
 
-
 BUG_BACK = [ "orchid", "goldenrod", "lightgrey", "thistle", "rosybrown", "mediumorchid", "darkkhaki", "greenyellow", "mediumvioletred","indianred", "peru", "chocolate", "palegreen", "tan", "darkgoldenrod", "palevioletred", "red", "lightcyan" ]
+# POS = 10
 
 class Scarab:
 # Scarab class for representing and generating scarab-shaped bug.
 
-    def __init__(self):
+    def __init__(self, POS=0):
         # Create a new scarab bug.
         main_color = random.choice(BUG_BACK)
         detail_color = random.choice(BUG_BACK)
         legs_color = random.choice(BUG_BACK)
 
         scarab = bug.Turtle()
+        scarab.setx(POS)
         scarab.color(main_color)
         scarab.pensize(5)
 
@@ -82,20 +83,17 @@ class Scarab:
 
 # class Moth:
 
+
 class Lady:
 
-    def __init__(self):
+    def __init__(self, POS=0):
 
         main_color = random.choice(BUG_BACK)
         detail_color = random.choice(BUG_BACK)
         legs_color = random.choice(BUG_BACK)
 
-        # if beta_bug:
-        #     change x position
-        # else:
-
-
         lady = bug.Turtle()
+        lady.setx(POS)
         lady.color(main_color)
         lady.pensize(3)
 
