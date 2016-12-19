@@ -2,13 +2,13 @@
 # goal of practicing writing Mendelian inheritance algorithms
 import turtle as bug
 import random
-from bug_types import Scarab, Lady
+from bug_types import Scarab, Lady, QueenBee, Widow
 
 window = bug.Screen()
 window.bgcolor("black")
 
 
-THE_BUGS = [ Scarab, Lady ]
+THE_BUGS = [ Scarab, QueenBee, Widow ]
 
 
 class TheBug:
@@ -17,7 +17,8 @@ class TheBug:
 
   def __init__(self, POS=0):
 
-    the_bug_type = random.choice(THE_BUGS)
+    # the_bug_type = random.choice(THE_BUGS)
+    the_bug_type = THE_BUGS[2]
     self.bug_type = the_bug_type(POS)
 
 
